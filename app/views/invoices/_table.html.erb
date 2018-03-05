@@ -1,4 +1,4 @@
-<% collection.each do |invoice| %> 
+<% collection.each do |invoice| %>
   <tr>
     <th><%= invoice.id %></th>
     <th><%= invoice.orders.first ? invoice.orders.first.customer.name : "No Orders" %></th>

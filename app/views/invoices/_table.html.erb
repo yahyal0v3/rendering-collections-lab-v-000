@@ -1,12 +1,6 @@
-<table>
+<% collection.each do |invoice| %> 
   <tr>
-    <th>Invoice Id
-    <th>Customer</th>
+    <th><%= invoice.id %></th>
+    <th><%= invoice.orders.first ? invoice.orders.first.customer.name : "No Orders" %></th>
   </tr>
-  <% @invoices.each do |invoice| %>
-    <tr>
-      <th><%= invoice.id %></th>
-      <th><%= invoice.orders.first ? invoice.orders.first.customer.name : "No Orders" %></th>
-    </tr>
-  <% end %>
-</table>
+<% end %>
